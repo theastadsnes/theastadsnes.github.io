@@ -29,8 +29,6 @@ The enrollment process includes several steps from classical biometric image pro
 
 ## b. Compare a new fingerprint to the fingerprints in the gallery
 
-## b. Compare a new fingerprint to the fingerprints in the gallery
-
 To match a new fingerprint, the system extracts minutiae points and compares them to those in the stored templates. A simple distance-based score is used — the more matched points, the higher the score.
 
 I noticed that even prints from the same finger sometimes scored worse than expected. This is likely due to small shifts, rotation, or partial overlap between scans. The matcher doesn’t currently handle alignment or distortion, which makes it sensitive to small variations. Improving this would definitely help the system be more reliable.
