@@ -24,20 +24,24 @@ The enrollment process includes several steps from classical biometric image pro
 - **Minutiae Extraction:** The image is skeletonized and ridge endings/bifurcations are detected.
 - **Template Storage:** Extracted features are saved using Python’s Pickle format for later matching.
 
-Simple GUI setup for fingerprint enrollment:
+<details>
+  <summary><strong>Simple GUI setup for fingerprint enrollment</strong></summary>
 
-```python
-image_files = [f for f in os.listdir("DB1_B") if f.endswith(".tif")]
-image_dropdown = Dropdown(options=image_files, description="Image:")
-name_input = Text(description="Name:")
-button = Button(description="Enroll Fingerprint", button_style="success")
-display(VBox([name_input, image_dropdown, button]))
+  <br>
+
+  ```python
+  image_files = [f for f in os.listdir("DB1_B") if f.endswith(".tif")]
+  image_dropdown = Dropdown(options=image_files, description="Image:")
+  name_input = Text(description="Name:")
+  button = Button(description="Enroll Fingerprint", button_style="success")
+  display(VBox([name_input, image_dropdown, button]))
 ```
-
-<figure style="text-align: center;">
+  <figure style="text-align: center;">
   <img src="/assets/GUI.png" alt="Simple GUI setup" width="70%">
-  <figcaption>Figure: Simple GUI setup for fingerprint enrollment" width.</figcaption>
-</figure>
+  <figcaption>Figure: Simple GUI setup for fingerprint enrollment".</figcaption>
+  </figure>
+
+
 
 ---
 
