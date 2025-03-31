@@ -41,7 +41,7 @@ The enrollment process includes several steps from classical biometric image pro
   <figcaption>Figure: Simple GUI setup for fingerprint enrollment".</figcaption>
   </figure>
 
-
+</details>
 
 ---
 
