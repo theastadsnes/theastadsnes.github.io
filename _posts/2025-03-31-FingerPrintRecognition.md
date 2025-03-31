@@ -1,6 +1,6 @@
 # Finger print recognition system
 
-In the first task of Assignment 2 we were asked to:
+In the first task of *Assignment 2* we were asked to:
 
 Design a GUI and template file/database which allows you to:
 
