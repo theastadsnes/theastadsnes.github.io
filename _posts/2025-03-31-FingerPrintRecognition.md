@@ -26,17 +26,21 @@ The enrollment process includes several steps from classical biometric image pro
 
 Simple GUI setup for fingerprint enrollment:
 
-`
+Simple GUI setup for fingerprint enrollment:
+
+```python
 image_files = [f for f in os.listdir("DB1_B") if f.endswith(".tif")]
 image_dropdown = Dropdown(options=image_files, description="Image:")
 name_input = Text(description="Name:")
 button = Button(description="Enroll Fingerprint", button_style="success")
-display(VBox([name_input, image_dropdown, button]))`
+display(VBox([name_input, image_dropdown, button]))
+
 
 <figure style="text-align: center;">
   <img src="/assets/GUI.png" alt="Simple GUI setup" width="70%">
   <figcaption>Figure: Simple GUI setup for fingerprint enrollment" width.</figcaption>
 </figure>
+```
 ---
 
 ## b. Compare a new fingerprint to the fingerprints in the gallery
