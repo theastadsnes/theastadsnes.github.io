@@ -6,7 +6,7 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: Welcome to my blog!
+title: Thea´s fastai blog!
 description: This is a collection of things i have learned in the course ELEC4630 - Computer Vision and Deep Learning! 
 github_username: theastadsnes
 
@@ -15,7 +15,7 @@ email: thea.stadsnes@hotmail.com
 twitter_username:
 
 # Set this to true to get LaTeX math equation support
-use_math:
+use_math: true
 
 # Add your Google Analytics ID here if you have one and want to use it
 google_analytics:
