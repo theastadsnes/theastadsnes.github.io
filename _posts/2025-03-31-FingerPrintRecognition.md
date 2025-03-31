@@ -14,7 +14,7 @@ In this blogpost I will share some thoughts and results from the task that I fou
 
 ---
 
-## a. Enroll a fingerprint and associate a name
+### a. Enroll a fingerprint and associate a name
 
 The enrollment process includes several steps from classical biometric image processing:
 
@@ -45,7 +45,7 @@ display(VBox([name_input, image_dropdown, button]))
 
 ---
 
-## b. Compare a new fingerprint to the fingerprints in the gallery
+### b. Compare a new fingerprint to the fingerprints in the gallery
 
 To match a new fingerprint, the system extracts minutiae points and compares them to those in the stored templates. A simple distance-based score is used — the more matched points, the higher the score.
 
@@ -54,13 +54,13 @@ I noticed that even prints from the same finger sometimes scored worse than expe
 
 ---
 
-## c. Evaluate your system on several fingerprints and adjust the threshold for good performance with low error rates
+### c. Evaluate your system on several fingerprints and adjust the threshold for good performance with low error rates
 
 I ran tests on multiple fingerprint pairs and adjusted the matching threshold to see how it affected accuracy. A higher threshold reduced false matches but also missed some genuine ones. After a bit of tuning, I found that a threshold around 14 gave the best balance between false positives and false negatives for my dataset.
 
 ---
 
-## d. Produce a ROC curve showing error rates versus threshold
+### d. Produce a ROC curve showing error rates versus threshold
 
 I plotted a ROC curve by sweeping through different thresholds and recording the error rates. It showed the usual trade-off: as the threshold increases, false positives go down, but false negatives go up. The Equal Error Rate (EER) — where FPR and FNR are roughly equal — was around threshold 14–15, which helped guide my tuning.
 
@@ -73,6 +73,6 @@ I plotted a ROC curve by sweeping through different thresholds and recording the
 
 ---
 
-## e. Estimate the false positive rate (false alarm rate) for a false negative rate of 1%
+### e. Estimate the false positive rate (false alarm rate) for a false negative rate of 1%
 
 I wrote a simple loop to estimate the FPR when the FNR was fixed at 1%. The result was pretty extreme — the FPR shot up to over 99%, meaning the system was matching almost everything. This clearly shows that our current matching method is too basic, and more robust techniques (like alignment or smarter descriptors) are needed to improve real-world reliability.
