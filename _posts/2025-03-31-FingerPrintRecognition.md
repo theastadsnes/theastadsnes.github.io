@@ -33,6 +33,7 @@ name_input = Text(description="Name:")
 button = Button(description="Enroll Fingerprint", button_style="success")
 display(VBox([name_input, image_dropdown, button]))`
 
+![Simple GUI setup](../assets/GUI.png)
 ---
 
 ## b. Compare a new fingerprint to the fingerprints in the gallery
