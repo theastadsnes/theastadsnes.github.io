@@ -33,7 +33,10 @@ name_input = Text(description="Name:")
 button = Button(description="Enroll Fingerprint", button_style="success")
 display(VBox([name_input, image_dropdown, button]))`
 
-![Simple GUI setup](../assets/GUI.png)
+<figure style="text-align: center;">
+  <img src="/assets/GUI.png" alt="Simple GUI setup" width="70%">
+  <figcaption>Figure: Simple GUI setup for fingerprint enrollment" width.</figcaption>
+</figure>
 ---
 
 ## b. Compare a new fingerprint to the fingerprints in the gallery
@@ -55,7 +58,11 @@ I ran tests on multiple fingerprint pairs and adjusted the matching threshold to
 
 I plotted a ROC curve by sweeping through different thresholds and recording the error rates. It showed the usual trade-off: as the threshold increases, false positives go down, but false negatives go up. The Equal Error Rate (EER) — where FPR and FNR are roughly equal — was around threshold 14–15, which helped guide my tuning.
 
-![Threshold vs Error Rate](../assets/output.png)
+<figure style="text-align: center;">
+  <img src="/assets/output.png" alt="Threshold vs Error Rate" width="70%">
+  <figcaption>Figure: ROC curve showing error rates at different thresholds.</figcaption>
+</figure>
+
 
 
 ---
