@@ -24,6 +24,14 @@ The enrollment process includes several steps from classical biometric image pro
 - **Minutiae Extraction:** The image is skeletonized and ridge endings/bifurcations are detected.
 - **Template Storage:** Extracted features are saved using Python’s Pickle format for later matching.
 
+Simple GUI setup for fingerprint enrollment:
+
+`
+image_files = [f for f in os.listdir("DB1_B") if f.endswith(".tif")]
+image_dropdown = Dropdown(options=image_files, description="Image:")
+name_input = Text(description="Name:")
+button = Button(description="Enroll Fingerprint", button_style="success")
+display(VBox([name_input, image_dropdown, button]))`
 
 ---
 
@@ -45,6 +53,9 @@ I ran tests on multiple fingerprint pairs and adjusted the matching threshold to
 ## d. Produce a ROC curve showing error rates versus threshold
 
 I plotted a ROC curve by sweeping through different thresholds and recording the error rates. It showed the usual trade-off: as the threshold increases, false positives go down, but false negatives go up. The Equal Error Rate (EER) — where FPR and FNR are roughly equal — was around threshold 14–15, which helped guide my tuning.
+
+![Threshold vs Error Rate](../assets/output.png)
+
 
 ---
 
