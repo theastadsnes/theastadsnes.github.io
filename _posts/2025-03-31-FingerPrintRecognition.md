@@ -48,6 +48,7 @@ display(VBox([name_input, image_dropdown, button]))
 
 ---
 
+
 ### b. Compare a new fingerprint to the fingerprints in the gallery
 
 To match a new fingerprint, the system extracts minutiae points and compares them to those in the stored templates. A simple distance-based score is used — the more matched points, the higher the score.
