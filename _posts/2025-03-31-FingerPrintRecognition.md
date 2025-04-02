@@ -1,4 +1,4 @@
-# Finger print recognition system
+# Fingerprint recognition system
 
 In the first task of *Assignment 2* we were asked to:
 
